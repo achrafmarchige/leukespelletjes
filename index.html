@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Speel de beste online unblocked spelletjes gratis in je browser. Geen aanmelding nodig!">
+    <title>FunSpeel - Online Unblocked Spelletjes Gratis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid #e94560;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #fff;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #e94560;
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #ccc;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #ff6b6b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .game-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .game-image {
+            height: 180px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .game-info {
+            padding: 1.5rem;
+        }
+        
+        .game-info h3 {
+            margin-bottom: 0.5rem;
+            color: #e94560;
+        }
+        
+        .game-info p {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .play-btn {
+            display: inline-block;
+            background: #4ecca3;
+            color: #1a1a2e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            background: #3db892;
+            transform: scale(1.05);
+        }
+        
+        .features {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .features h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #e94560;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            padding: 1.5rem;
+        }
+        
+        .feature-item i {
+            font-size: 3rem;
+            color: #4ecca3;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-item h3 {
+            margin-bottom: 0.8rem;
+            color: #fff;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer p {
+            color: #aaa;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Keyword links styling */
+        a.keyword-link {
+            color: #4ecca3;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px dashed #4ecca3;
+            transition: all 0.2s ease;
+        }
+        
+        a.keyword-link:hover {
+            color: #e94560;
+            border-bottom-style: solid;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            nav {
+                gap: 1rem;
+            }
+            
+            nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://funspeel.nl/" class="logo">Fun<span>Speel</span></a>
+        <nav>
+            <a href="https://funspeel.nl/">Home</a>
+            <a href="https://funspeel.nl/">Actie Spellen</a>
+            <a href="https://funspeel.nl/">Puzzel Spellen</a>
+            <a href="https://funspeel.nl/">Sport Spellen</a>
+            <a href="https://funspeel.nl/">Meer Spellen</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Welkom bij de Beste <a href="https://funspeel.nl/" class="keyword-link">Online Unblocked Spelletjes</a></h1>
+        <p>
+            Ontdek duizenden <a href="https://funspeel.nl/" class="keyword-link">online</a>, 
+            <a href="https://funspeel.nl/" class="keyword-link">free</a> games die je direct in je browser kunt spelen. 
+            Geen <a href="https://funspeel.nl/" class="keyword-link">no signin needed</a> en volledig 
+            <a href="https://funspeel.nl/" class="keyword-link">unblocked</a> voor plezier op elk moment!
+        </p>
+        <a href="https://funspeel.nl/" class="cta-button">Speel Nu Gratis</a>
+    </section>
+    
+    <section class="features">
+        <h2>Waarom Kiezen voor FunSpeel?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i>🎮</i>
+                <h3>100% <a href="https://funspeel.nl/" class="keyword-link">Free</a></h3>
+                <p>Alle spellen zijn volledig gratis te spelen zonder verborgen kosten of abonnementen.</p>
+            </div>
+            <div class="feature-item">
+                <i>⚡</i>
+                <h3>Direct Spelen</h3>
+                <p>Geen downloads, geen installaties. Speel <a href="https://funspeel.nl/" class="keyword-link">online</a> direct in je browser.</p>
+            </div>
+            <div class="feature-item">
+                <i>🔒</i>
+                <h3><a href="https://funspeel.nl/" class="keyword-link">No Signin Needed</a></h3>
+                <p>Geen account nodig! Begin direct met spelen zonder registratie of inloggen.</p>
+            </div>
+            <div class="feature-item">
+                <i>🌐</i>
+                <h3><a href="https://funspeel.nl/" class="keyword-link">Unblocked</a> Toegang</h3>
+                <p>Speel overal en altijd, zelfs op scholen of werkplekken met beperkte toegang.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="games-grid">
+        <!-- Game Card 1 -->
+        <div class="game-card">
+            <div class="game-image">🏎️</div>
+            <div class="game-info">
+                <h3>Race Master 3D</h3>
+                <p>Ervaar spannende races in deze <a href="https://funspeel.nl/" class="keyword-link">online</a> racegame. Speel <a href="https://funspeel.nl/" class="keyword-link">free</a> zonder registratie!</p>
+                <a href="https://funspeel.nl/" class="play-btn">Speel Nu</a>
+            </div>
+        </div>
+        
+        <!-- Game Card 2 -->
+        <div class="game-card">
+            <div class="game-image">🧩</div>
+            <div class="game-info">
+                <h3>Puzzel Avontuur</h3>
+                <p>Los uitdagende puzzels op in deze <a href="https://funspeel.nl/" class="keyword-link">unblocked</a> puzzelgame. <a href="https://funspeel.nl/" class="keyword-link">No signin needed</a>!</p>
+                <a href="https://funspeel.nl/" class="play-btn">Speel Nu</a>
+            </div>
+        </div>
+        
+        <!-- Game Card 3 -->
+        <div class="game-card">
+            <div class="game-image">⚽</div>
+            <div class="game-info">
+                <h3>Voetbal Kampioen</h3>
+                <p>Scoor doelpunten in deze <a href="https://funspeel.nl/" class="keyword-link">online</a> sportgame. Volledig <a href="https://funspeel.nl/" class="keyword-link">free</a> en <a href="https://funspeel.nl/" class="keyword-link">unblocked</a>.</p>
+                <a href="https://funspeel.nl/" class="play-btn">Speel Nu</a>
+            </div>
+        </div>
+        
+        <!-- Game Card 4 -->
+        <div class="game-card">
+            <div class="game-image">👾</div>
+            <div class="game-info">
+                <h3>Space Shooter</h3>
+                <p>Verdedig de aarde in deze actie-packed shooter. Speel <a href="https://funspeel.nl/" class="keyword-link">online</a>, <a href="https://funspeel.nl/" class="keyword-link">free</a>, zonder gedoe!</p>
+                <a href="https://funspeel.nl/" class="play-btn">Speel Nu</a>
+            </div>
+        </div>
+        
+        <!-- Game Card 5 -->
+        <div class="game-card">
+            <div class="game-image">🎯</div>
+            <div class="game-info">
+                <h3>Doel Schieten</h3>
+                <p>Test je precisie in deze <a href="https://funspeel.nl/" class="keyword-link">unblocked</a> schietgame. <a href="https://funspeel.nl/" class="keyword-link">No signin needed</a> om te beginnen!</p>
+                <a href="https://funspeel.nl/" class="play-btn">Speel Nu</a>
+            </div>
+        </div>
+        
+        <!-- Game Card 6 -->
+        <div class="game-card">
+            <div class="game-image">🧠</div>
+            <div class="game-info">
+                <h3>Brain Trainer</h3>
+                <p>Train je brein met leuke mini-games. <a href="https://funspeel.nl/" class="keyword-link">Online</a>, <a href="https://funspeel.nl/" class="keyword-link">free</a> en direct speelbaar!</p>
+                <a href="https://funspeel.nl/" class="play-btn">Speel Nu</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features" style="background: rgba(233, 69, 96, 0.1);">
+        <h2>Veelgestelde Vragen</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <p style="margin-bottom: 1rem;"><strong>Zijn de spellen echt gratis?</strong><br>
+            Ja! Alle spellen op FunSpeel zijn 100% <a href="https://funspeel.nl/" class="keyword-link">free</a> om te spelen.</p>
+            
+            <p style="margin-bottom: 1rem;"><strong>Moet ik een account aanmaken?</strong><br>
+            Nee, er is <a href="https://funspeel.nl/" class="keyword-link">no signin needed</a>. Begin direct met spelen!</p>
+            
+            <p style="margin-bottom: 1rem;"><strong>Werken de spellen op school?</strong><br>
+            Ja, onze spellen zijn speciaal ontworpen om <a href="https://funspeel.nl/" class="keyword-link">unblocked</a> te zijn op de meeste netwerken.</p>
+            
+            <p><strong>Op welke apparaten kan ik spelen?</strong><br>
+            Alle spellen zijn <a href="https://funspeel.nl/" class="keyword-link">online</a> speelbaar in elke moderne webbrowser op pc, tablet of mobiel.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 FunSpeel.nl - Jouw Bron voor <a href="https://funspeel.nl/" class="keyword-link">Online Unblocked Spelletjes</a></p>
+        <p>Alle spellen zijn <a href="https://funspeel.nl/" class="keyword-link">free</a>, <a href="https://funspeel.nl/" class="keyword-link">online</a>, <a href="https://funspeel.nl/" class="keyword-link">no signin needed</a> en <a href="https://funspeel.nl/" class="keyword-link">unblocked</a>.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <a href="https://funspeel.nl/" style="color: #4ecca3; margin: 0 10px;">Privacybeleid</a> | 
+            <a href="https://funspeel.nl/" style="color: #4ecca3; margin: 0 10px;">Contact</a> | 
+            <a href="https://funspeel.nl/" style="color: #4ecca3; margin: 0 10px;">Voorwaarden</a>
+        </p>
+    </footer>
+
+    <script>
+        // Simple animation for game cards on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.game-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>
